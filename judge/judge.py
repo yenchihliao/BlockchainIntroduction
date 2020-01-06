@@ -3,6 +3,11 @@ import sys
 import json
 import os
 
+# handle input
+assert len(sys.argv) == 3
+ID = sys.argv[1] # Student ID(ex: r07944023)
+lang = sys.argv[2] # Use of language(ex:py|js|java)
+
 # Connect to the contract 
 w3 = Web3(Web3.HTTPProvider("https://ropsten.infura.io/v3/5b3e6a6f546f478eaf60bb110825f4dc")) 
 f = open('PJ2_abi.json')
@@ -10,9 +15,6 @@ abi = json.load(f)
 PJ2 = w3.eth.contract(address='0xC820cBdc60c879cB73Cdd895e7e89E796f6C6C16', abi=abi)
 
 # Score on contract
-assert len(sys.argv) == 3
-ID = sys.argv[1]
-lang = sys.argv[2]
 print("grading:", ID)
 total = 0
 total += PJ2.functions.score(ID).call()

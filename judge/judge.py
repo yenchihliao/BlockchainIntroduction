@@ -66,7 +66,7 @@ score = 0
 abiFile = 'problem3_abi'
 command = 'solc ' + '--abi ' + ID + '/problem3.sol > ' + abiFile
 try:
-    os.system(command)
+    assert(os.system(command) == 0)
     f = open(abiFile, 'r')
     for _ in range(4):
         abi = f.readline()[:-1]
@@ -90,10 +90,4 @@ total += score
 f = open("score.txt", 'a')
 f.write(ID + " " + str(total) + "\n")
 f.close()
-print("Total score(120):", total)
-
-
-
-
-
-
+print("Total score(100+20):", total)

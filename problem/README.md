@@ -61,7 +61,7 @@ Write a program that deploys a contract than send a transaction to the function,
 ## Some recommandations
 
 1. Although you can use the solution of problem2 to solve problem1, you may want to try out some sophisticated tools to send transactions such as [MetaMask](https://metamask.io/) with [Remix](https://remix.ethereum.org/).
-2. It's convenient to get Ropsten testnet coin by using the faucet if you are using MetaMask. (remember to switch to ropsten testnet instead of the mainnet)
+2. It's convenient to get Ropsten testnet coin by using the [faucet](https://faucet.metamask.io/) if you are using MetaMask. (remember to switch to ropsten testnet instead of the mainnet)
 3. When you are implementing the smart contract, you can test he correctness of your code on Remix with MetaMask with ease.
 4. If you don't know how to write a smart contract, [here](https://cryptozombies.io/) is a solidity tutorial.
 5. To write programs that interact with chains, the package, web3, is usually the choice.

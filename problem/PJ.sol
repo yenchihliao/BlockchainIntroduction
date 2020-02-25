@@ -4,7 +4,7 @@ contract PJ2 {
 	mapping(string=>int) public score;
 
 	mapping(string=>bool) public isP1Submit;
-	function Problem1(string memory ID) public payable{ // pay at least 3 gwei to submit problem1 
+	function Problem1(string memory ID) public payable{ // pay at least 3 gwei to submit problem1
 		assert(msg.value >= 3000000000);// 3 gwei
 		if(isP1Submit[ID] == false){
 			score[ID] += 10;
@@ -46,6 +46,6 @@ contract PJ2 {
 			isBonusSubmit[ID] = true;
 			score[ID] += 20;
 		}
-	} 
+	}
 }
 

@@ -8,8 +8,8 @@ assert len(sys.argv) == 3
 ID = sys.argv[1] # Student ID(ex: r07944023)
 lang = sys.argv[2] # Use of language(ex:py|js|java)
 
-# Connect to the contract 
-w3 = Web3(Web3.HTTPProvider("https://ropsten.infura.io/v3/5b3e6a6f546f478eaf60bb110825f4dc")) 
+#  Connect to the contract
+w3 = Web3(Web3.HTTPProvider("https://ropsten.infura.io/v3/5b3e6a6f546f478eaf60bb110825f4dc"))
 f = open('PJ2_abi.json')
 abi = json.load(f)
 PJ2 = w3.eth.contract(address='0xC820cBdc60c879cB73Cdd895e7e89E796f6C6C16', abi=abi)
@@ -20,7 +20,7 @@ total = 0
 total += PJ2.functions.score(ID).call()
 print("Score on contract(30+20):", total)
 
-# Score for problem2 correctness 
+# Score for problem2 correctness
 import hashlib
 hasher = hashlib.sha256()
 score = 0
@@ -88,7 +88,7 @@ except:
 print("Score for problem3 contract correctness(30):", score)
 total += score
 
-# Total score 
+# Total score
 f = open("score.txt", 'a')
 f.write(ID + " " + str(total) + "\n")
 f.close()

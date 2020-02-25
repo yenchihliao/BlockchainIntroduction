@@ -1,12 +1,12 @@
 import hashlib
 import sys
 
-if len(sys.argv) > 1:
+if len(sys.argv) == 2:
     fileName = sys.argv[1]
 else:
     fileName = 'path.py'
-    
-    
+
+
 hasher = hashlib.sha256()
 with open(fileName, 'rb') as f:
     hasher.update(f.read())

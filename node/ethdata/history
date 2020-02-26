@@ -1,0 +1,9 @@
+
+admin.nodeInfo
+miner.start(1)
+miner.stop()
+eth.getTransaction("0xfc926b15567f553d303653f5d69dc14ad4872516180eb96fbe0610994d6f5ec7")
+admin.info
+admin.nodeInfo
+eth.getTransaction("0x5cc56093a137c5149696e3279c4a5dfcf26fb663c5ef2ee2235c3e16efe48115")
+admin.nodeInfo

@@ -2,7 +2,6 @@
 all: clean init run
 run:
 		geth --datadir="ethdata" --nodiscover console --allow-insecure-unlock --rpc --rpcport "8080" --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "eth,net,web3,miner,debug,personal,rpc" --nousb
-		# geth --datadir="ethdata" --networkid 15 --nodiscover console --allow-insecure-unlock --rpc --rpcport "8080" --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi "eth,net,web3,miner,debug,personal,rpc" --nousb
 init:
 		geth --nousb init --datadir ethdata genesis.json
 clean:

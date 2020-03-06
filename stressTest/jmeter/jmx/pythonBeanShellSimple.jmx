@@ -32,7 +32,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 Runtime r = Runtime.getRuntime();
-String command = &quot;/usr/bin/python3 /home/caideyi/jmeter/jmeter.py &quot;;
+String command = &quot;/usr/bin/python3 /home/caideyi/repo/BlockchainIntroduction/stressTest/jmeter/script/signRawTx.py &quot;;
 //vars.put(“RESULT”,STR);
 Process p = r.exec(command);
 p.waitFor();
@@ -44,6 +44,7 @@ while ((line = b.readLine()) != null) {
 }
 b.close();
 vars.put(&quot;RET&quot;,response.toString());
+System.out.println(response.toString());
 </stringProp>
           <stringProp name="BeanShellSampler.filename"></stringProp>
           <stringProp name="BeanShellSampler.parameters"></stringProp>

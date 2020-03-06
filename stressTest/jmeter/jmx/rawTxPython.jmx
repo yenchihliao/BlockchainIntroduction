@@ -109,7 +109,7 @@ import java.io.InputStreamReader;
 
 var count = vars.get(&quot;COUNT&quot;);
 Runtime r = Runtime.getRuntime();
-String command = &quot;/usr/bin/python3 /home/caideyi/jmeter/jmeter.py &quot; + count;
+String command = &quot;/usr/bin/python3 /home/caideyi/repo/BlockchainIntroduction/stressTest/jmeter/script/signRawTx.py &quot; + count;
 Process p = r.exec(command);
 p.waitFor();
 BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));

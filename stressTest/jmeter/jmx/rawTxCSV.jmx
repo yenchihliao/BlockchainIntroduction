@@ -57,7 +57,9 @@
 					<CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
 						<stringProp name="delimiter">\t</stringProp>
 						<stringProp name="fileEncoding"></stringProp>
-						<stringProp name="filename">./data.csv</stringProp>
+						<stringProp name="filename">./data/rawTx.csv</stringProp>
+
+
 						<boolProp name="ignoreFirstLine">false</boolProp>
 						<boolProp name="quotedData">false</boolProp>
 						<boolProp name="recycle">true</boolProp>
@@ -80,18 +82,17 @@
 						<stringProp name="parameters"></stringProp>
 						<boolProp name="resetInterpreter">false</boolProp>
 						<stringProp name="script">//https://stackoverflow.com/questions/24512365/jmeter-run-a-python-script-before-calling-each-http-request-sampler
-							import java.io.BufferedReader;
-							import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
-							Runtime r = Runtime.getRuntime();
-							Process p = r.exec(&quot;/usr/bin/python /path/to/your/script.py&quot;);
-							p.waitFor();
-							BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
-							String line = &quot;&quot;;
-							StringBuilder response = new StringBuilder();
-							while ((line = b.readLine()) != null) {
-	response.append(line);
-
+Runtime r = Runtime.getRuntime();
+Process p = r.exec(&quot;/usr/bin/python /path/to/your/script.py&quot;);
+p.waitFor();
+BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
+String line = &quot;&quot;;
+StringBuilder response = new StringBuilder();
+while ((line = b.readLine()) != null) {
+response.append(line);
 }
 
 b.close();
@@ -168,7 +169,7 @@ vars.put(&quot;ID&quot;,response.toString());
 		  </ResultCollector>
 		  <hashTree/>
 		  <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
-			  <stringProp name="FileSaver.filename">~/report/response</stringProp>
+			  <stringProp name="FileSaver.filename">./report/response</stringProp>
 			  <boolProp name="FileSaver.errorsonly">false</boolProp>
 			  <boolProp name="FileSaver.successonly">false</boolProp>
 			  <boolProp name="FileSaver.skipsuffix">false</boolProp>

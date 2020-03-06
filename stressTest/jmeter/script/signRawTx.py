@@ -5,7 +5,10 @@ import sys
 f_priv = open('priv.txt', 'r')
 keys = f_priv.readlines()
 f_priv.close()
-arg = int(sys.argv[1])
+if len(sys.argv) == 1:
+    arg = 303
+else:
+    arg = int(sys.argv[1])
 nonce = arg // 300
 account = arg % 300
 transaction = {

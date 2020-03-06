@@ -48,7 +48,7 @@
 				</BeanShellSampler>
 				<hashTree/>
 				<CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-					<stringProp name="filename">./data.csv</stringProp>
+					<stringProp name="filename">./data/mixJRPC.csv</stringProp>
 					<stringProp name="fileEncoding"></stringProp>
 					<stringProp name="variableNames"></stringProp>
 					<boolProp name="ignoreFirstLine">true</boolProp>

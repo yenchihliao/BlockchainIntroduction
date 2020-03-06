@@ -4,3 +4,5 @@ __pycache__
 .ipynb_checkpoint
 geth/
 history
+jmeter.log
+report.*

@@ -1,4 +1,4 @@
-#lcreate raw transaction from sratch
+# create send_RqwTransaction JRPC Request
 from web3.auto import w3
 import sys
 

@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 # create send_transaction JSON RPC request from file of private keys
 
+=======
+# create send_transaction JSON RPC request
+>>>>>>> Stashed changes
 from web3.auto import w3
 import sys
 

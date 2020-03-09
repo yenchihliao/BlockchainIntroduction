@@ -1,4 +1,5 @@
-# create send_transaction JSON RPC request
+# create send_transaction JSON RPC request to console
+
 from web3.auto import w3
 import sys
 

@@ -1,4 +1,5 @@
-# create send_RqwTransaction JRPC Request
+# create send_rawTransaction JRPC Request to console
+
 from web3.auto import w3
 import sys
 

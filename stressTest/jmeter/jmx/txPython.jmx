@@ -18,7 +18,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">305</stringProp>
+        <stringProp name="ThreadGroup.num_threads">3000</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -76,7 +76,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_sendRawTransaction&quot;,&quot;params&quot;:[&quot;${params}&quot;],&quot;id&quot;:1}</stringProp>
+                <stringProp name="Argument.value">{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_sendTransaction&quot;,&quot;params&quot;:[${params}],&quot;id&quot;:1}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -109,7 +109,8 @@ import java.io.InputStreamReader;
 
 var count = vars.get(&quot;COUNT&quot;);
 Runtime r = Runtime.getRuntime();
-String command = &quot;/usr/bin/python3 /home/caideyi/repo/BlockchainIntroduction/stressTest/jmeter/script/signRawTx.py &quot; + count;
+String command = &quot;/usr/bin/python3 /home/caideyi/repo/BlockchainIntroduction/stressTest/jmeter/script/tx.py &quot; + count;
+System.out.println("executing: " + command);
 Process p = r.exec(command);
 p.waitFor();
 BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -120,7 +121,7 @@ while ((line = b.readLine()) != null) {
 }
 b.close();
 String newParam = response.toString();
-System.out.println(newParam);
+System.out.println("System.out: " + newParam);
 vars.put(&quot;params&quot;, newParam);</stringProp>
           </BeanShellPreProcessor>
           <hashTree/>

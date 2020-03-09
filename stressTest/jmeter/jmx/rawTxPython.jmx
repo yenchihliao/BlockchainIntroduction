@@ -110,6 +110,7 @@ import java.io.InputStreamReader;
 var count = vars.get(&quot;COUNT&quot;);
 Runtime r = Runtime.getRuntime();
 String command = &quot;/usr/bin/python3 /home/caideyi/repo/BlockchainIntroduction/stressTest/jmeter/script/signRawTx.py &quot; + count;
+System.out.println("executing: " + command);
 Process p = r.exec(command);
 p.waitFor();
 BufferedReader b = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -120,7 +121,7 @@ while ((line = b.readLine()) != null) {
 }
 b.close();
 String newParam = response.toString();
-System.out.println(newParam);
+System.out.println("System.out: " + newParam);
 vars.put(&quot;params&quot;, newParam);</stringProp>
           </BeanShellPreProcessor>
           <hashTree/>

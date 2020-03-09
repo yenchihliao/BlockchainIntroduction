@@ -1,4 +1,5 @@
-#lcreate raw transaction from sratch
+# create raw transaction from file of private keys
+
 from web3.auto import w3
 import sys
 

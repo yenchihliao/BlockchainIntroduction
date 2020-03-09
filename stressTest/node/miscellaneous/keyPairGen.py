@@ -1,4 +1,5 @@
-# Generate ethereum account and its private key from scratch
+# Generate ethereum account and its private key
+
 import sha3
 from ecdsa import SigningKey, SECP256k1
 f_addr = open('addrs.txt', 'a')

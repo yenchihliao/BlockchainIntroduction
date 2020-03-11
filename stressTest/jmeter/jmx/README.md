@@ -2,7 +2,7 @@
 
 * This directory stores different kinds of jmeter test configuration.
 * It's depreciated to modify jmx files directly. Use jmeter GUI instead. However, you can search for the following parameters if you must.
-	* num_threads: Defines the "USER"(testcase) number of the thread.
+	* num\_threads: Defines the "USER"(testcase) number of the thread.
 	* script: The java script that jmeter invoke when executing.(For those jmeter testcase that invoke external script, use absolute path)
 	* filename: The output file name.
 	* Argument.value: The request format.
